@@ -22,9 +22,10 @@
             <div class="text-right">
                 <button class="btn btn-primary" (click)="searchProducts()">Search</button>
                 
-                <button *abpPermission="'EcommerceApp.Products.CreateEdit'" class="btn btn-secondary m-2" (click)="addProduct()">Add Product</button>
-
-                <!-- *abpPermission="'EcommerceApp.Products.CreateEdit'" تخفي بها اي شي اذا ماكان يوجد صلاحية-->
+             
+                <button *ngIf="canCreate" class="btn btn-secondary m-2" (click)="addProduct()">Add Product</button>
+                <!-- *abpPermission="'EcommerceApp.Products.CreateEdit'" تخفي بها اي شي اذا ماكان يوجد صلاحية-
+               <button *abpPermission="'EcommerceApp.Products.CreateEdit'" class="btn btn-secondary m-2" (click)="addProduct()">Add Product</button>-->
                 <!-- طريقه اخرى <button *ngIf="canCreate" class="btn btn-secondary m-2" (click)="addProduct()">Add Product</button> -->
 
             </div>
