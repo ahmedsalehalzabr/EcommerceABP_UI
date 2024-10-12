@@ -25,11 +25,11 @@ categories: CategoryDto[] = [];
 products$: Observable<PagedResultDto<ProductDto>>;
 canCreate: boolean;
   constructor(private productsService: ProductsService,
-             private router:Router,
-             private formBuilder:FormBuilder,
-             private categoriesService: CategoriesService,
-             public readonly list:ListService<GetProductListDto>,
-             private permissionService: PermissionService
+              private router:Router,
+              private formBuilder:FormBuilder,
+              private categoriesService: CategoriesService,
+              public readonly list:ListService<GetProductListDto>,
+              private permissionService: PermissionService
   ) {
     this.buildForm();
   }
