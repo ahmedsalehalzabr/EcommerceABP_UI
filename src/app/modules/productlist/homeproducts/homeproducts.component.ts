@@ -1,17 +1,13 @@
-import { AuthService, PermissionService } from '@abp/ng.core';
 import { Component, OnInit } from '@angular/core';
 import { CategoriesService, CategoryDto } from '@proxy/categories';
 import { ProductDto, ProductsService } from '@proxy/products';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
+  selector: 'app-homeproducts',
+  templateUrl: './homeproducts.component.html',
+  styleUrl: './homeproducts.component.scss'
 })
-export class HomeComponent  implements OnInit{
-  get hasLoggedIn(): boolean {
-    return this.authService.isAuthenticated
-  }
+export class HomeproductsComponent implements OnInit {
   products : ProductDto[] = [];
   categories: CategoryDto[] = [];
 
@@ -22,17 +18,8 @@ ngOnInit(): void {
   });
 }
 
-  constructor(private authService: AuthService,
+  constructor(
               private productsService: ProductsService,
               private categoriesService: CategoriesService,
               ) {}
-
-  login() {
-    this.authService.navigateToLogin();
-  }
-
-
 }
-
-
-

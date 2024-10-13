@@ -10,7 +10,7 @@ const routes: Routes = [
     component: ListCategoriesComponent,
     //حماية الروت اذا مش عامل لوقن يرجعك تعمل لوقن
     canActivate: [authGuard]
-  }
+  } 
 ];
 
 @NgModule({

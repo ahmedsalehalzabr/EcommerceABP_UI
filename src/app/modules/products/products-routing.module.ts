@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ListProductsComponent } from './list-products/list-products.component';
 import { permissionGuard } from '@abp/ng.core';
 import { AddProductsComponent } from './add-products/add-products.component';
+import { HomeproductsComponent } from '../productlist/homeproducts/homeproducts.component';
 
 const routes: Routes = [
   {
@@ -24,7 +25,9 @@ const routes: Routes = [
      data: {
          requiredPolicy: 'EcommerceApp.Products.List', // policy key for your component
      },
+     
   }
+ 
 ];
 
 @NgModule({

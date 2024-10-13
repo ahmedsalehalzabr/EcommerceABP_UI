@@ -16,21 +16,29 @@ function configureRoutes(routes: RoutesService) {
         layout: eLayoutType.application,
       },
       {
-        path: 'products',
-        name: 'Products',
+        path: 'addproducts',
+        name: 'Add Products',
         iconClass: 'fas fa-box',
         order: 2,
         layout: eLayoutType.application,
          //بولسي ماتظهرش الايقونه دي الا للي معاهم صلاحيه
-         requiredPolicy: 'EcommerceApp.Products.List',
+        requiredPolicy: 'EcommerceApp.Products.List',
+      },
+      {
+        path: 'products',
+        name: 'Products',
+        iconClass: 'fas fa-store',
+        order: 3,
+        layout: eLayoutType.application,
+         //بولسي ماتظهرش الايقونه دي الا للي معاهم صلاحيه
+        requiredPolicy: 'EcommerceApp.Products.List',
       },
       {
         path: 'categories',
         name: 'Categories',
         iconClass: 'fas fa-list',
-        order: 3,
+        order: 4,
         layout: eLayoutType.application,
-       
       },
     ]);
   };
