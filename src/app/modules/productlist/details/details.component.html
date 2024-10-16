@@ -1,10 +1,21 @@
-<div >
-  <h2>{{ product.nameEn }} ({{ product.nameAr }})</h2>
-  <p>{{ product.descriptionEn }}</p>
-  <p>{{ product.descriptionAr }}</p>
-  <strong>Price: </strong> ${{ product.price }}
+
+<div class="box">
+  <div class="row">
+      <div class="col-md-6 col-sm-12">
+          <img src="{{product.imageUrl}}" alt="sas" class="image">
+      </div>
+      <div class="col-md-7 col-sm-12">
+          <div class="info">
+              <ul class="list-unstyled">
+                  <li><strong>NameEn : </strong>{{product.nameEn}}</li>
+                  <li><strong>NameAr : </strong>{{product.nameAr}}</li>
+                  <li><strong>Discription : </strong>{{product.descriptionEn}}</li>
+                  <li><strong>CategoryNameEn : </strong>{{product.categoryNameEn}}</li>
+                  <li><strong>categoryNameAr : </strong>{{product.categoryNameAr}}</li>
+                  <li><strong>Price : </strong>{{product.price}} $</li>
+                  <li><strong>Time : </strong>{{product.creationTime}}</li>
+              </ul>
+          </div>
+      </div>
+  </div>
 </div>
-
-
-
-  

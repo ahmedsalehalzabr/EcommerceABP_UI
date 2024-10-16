@@ -21,13 +21,12 @@ const routes: Routes = [
     pathMatch: 'full',
     component: ListProductsComponent,
      // نقفل الدخول عبر الروت الرابط للذي ماعندة صلاحية
-     canActivate:[permissionGuard],
-     data: {
+    canActivate:[permissionGuard],
+    data: {
          requiredPolicy: 'EcommerceApp.Products.List', // policy key for your component
-     },
-     
+  },   
   }
- 
+
 ];
 
 @NgModule({

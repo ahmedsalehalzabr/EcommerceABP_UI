@@ -19,7 +19,7 @@ export class AddProductsComponent {
     private router: Router,
     private formBuilder: FormBuilder) {
       
-    this.buildForm();
+    this.buildForm(); 
 
 
   }
